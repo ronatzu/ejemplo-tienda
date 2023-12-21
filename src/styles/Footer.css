@@ -1,0 +1,48 @@
+
+.footer {
+    background-color: #44312D;
+    color: #fff;
+    padding: 20px 200px;
+    text-align: center;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer_section {
+    margin-bottom: 20px;
+}
+
+.footer_titulo {
+    font-size: 1.2rem;
+}
+
+.footer_info,
+.footer_list,
+.footer_item,
+.footer_link {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer_list {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_item {
+    margin-bottom: 5px;
+}
+
+.footer_bottom {
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+/* Hover styles for links */
+.footer_link:hover {
+    text-decoration: underline;
+}
