@@ -5,14 +5,14 @@
 
 .buscador_entrada {
     border: none;
-    padding: 15px; /* Ajusta el tamaño de la barra de búsqueda según tus preferencias */
-    border-radius: 10px; /* Ajusta el radio según tus preferencias */
-    margin-right: 8px; /* Ajusta el espacio entre el input y el botón según tus preferencias */
-    width: 600px; /* Ajusta el ancho de la barra de búsqueda según tus preferencias */
+    padding: 15px;
+    border-radius: 10px;
+    margin-right: 8px;
+    width: 600px;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
 .buscador_entrada:hover {
-    border-color: #4CAF50; /* Cambia el color del borde al pasar el mouse */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Añade una sombra al pasar el mouse */
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }

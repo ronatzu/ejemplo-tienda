@@ -10,6 +10,5 @@ export const ShopRouter =()=>{
                 <Route path="*" element={<NotFound />}/>
             </Routes>
         </BrowserRouter>
-
     );
 };

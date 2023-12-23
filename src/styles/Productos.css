@@ -1,0 +1,35 @@
+.producto {
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: transparent;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.producto_categoria{
+    font-style: italic;
+}
+
+.producto_img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin: 0 auto;
+    border-radius: 5%;
+}
+
+.producto_nombre {
+    font-size: 20pt;
+    margin-top: 10px;
+}
+
+.producto:hover {
+    transform: scale(1.1);
+}
+
+.producto_descripcion {
+    white-space: pre-wrap;
+    margin: 0.25rem 0 0 0;
+}
