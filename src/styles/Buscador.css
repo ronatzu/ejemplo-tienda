@@ -4,11 +4,10 @@
 }
 
 .buscador_entrada {
+    width: 100%;
     border: none;
     padding: 15px;
     border-radius: 10px;
-    margin-right: 8px;
-    width: 600px;
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 

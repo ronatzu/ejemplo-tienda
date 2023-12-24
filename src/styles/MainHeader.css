@@ -1,20 +1,28 @@
-
-.header {
-    background-color: #f5f5dc;
-    padding: 10px 100px;
-}
-
 .header_container {
     display: flex;
-    justify-content: space-between;
+    background-color: #f5f5dc;
     align-items: center;
+    justify-content: space-between;
+}
+
+.header_logo {
+    flex: 1;
 }
 
 .header_logo img {
-    max-height: 100px;
+    margin-left: 20px;
+    max-height: 150px;
+    max-width: 150px;
 }
 
-.header_buscador,
+.header_buscador {
+    flex: 2;
+
+}
+
 .header_carrito {
-    margin-left: 20px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
 }

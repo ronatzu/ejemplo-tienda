@@ -2,21 +2,22 @@ import React from "react";
 import './App.css';
 import {Footer} from './components/Footer'
 import {MainHeader} from './components/MainHeader'
-
 import {ShopRouter} from "./router/ShopRouter";
 import {ShopContext} from "./context/ShopContext";
-import {NuevoProduct} from "./components/NuevoProducto";
+import {useProductos} from "./hook/useProductos";
 function App() {
-  return (
+
+    const productos = useProductos();
+
+    return (
       <>
 
+          <ShopContext.Provider value={{productos}}>
 
-          <MainHeader/>
-
-                <NuevoProduct/>
-
-
-          <Footer/>
+              <MainHeader/>
+              <ShopRouter/>
+              <Footer/>
+          </ShopContext.Provider>
 
       </>
   );
