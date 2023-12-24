@@ -1,4 +1,4 @@
-.Nuevo{
+.Nuevo {
     list-style: none;
     max-width: 80%;
     margin: 2% auto;
@@ -7,4 +7,11 @@
     gap: 0px 15px;
     grid-template-columns: repeat(5, 20%);
     justify-content: center;
+}
+
+.Nuevo a,
+.Nuevo a:hover,
+.Nuevo a:visited {
+    text-decoration: none;
+    color: inherit;
 }
