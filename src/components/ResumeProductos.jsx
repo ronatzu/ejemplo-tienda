@@ -1,33 +1,53 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/ResumeProductos.css';
 
-export const ResumeProductos = () => {
+export const ResumeProductos = (props) => {
     const [cantidad, setCantidad] = useState(1);
+    const [visible, setVisible] = useState(true);
+
+    useEffect(() => {
+        const claveEncontrada = Object.keys(localStorage).find((key) => key === props.id);
+        if (claveEncontrada) {
+            setCantidad(parseInt(localStorage.getItem(claveEncontrada), 10) || 1);
+        }
+    }, [props.id]);
+
+    const actualizarCantidadEnLocalStorage = (nuevaCantidad) => {
+        localStorage.setItem(props.id, nuevaCantidad.toString());
+    };
 
     const aumentarCantidad = () => {
-        setCantidad(cantidad + 1);
+        setCantidad((prevCantidad) => {
+            const nuevaCantidad = prevCantidad + 1;
+            actualizarCantidadEnLocalStorage(nuevaCantidad);
+            return nuevaCantidad;
+        });
     };
 
     const disminuirCantidad = () => {
         if (cantidad > 1) {
-            setCantidad(cantidad - 1);
+            setCantidad((prevCantidad) => {
+                const nuevaCantidad = prevCantidad - 1;
+                actualizarCantidadEnLocalStorage(nuevaCantidad);
+                return nuevaCantidad;
+            });
         }
     };
 
     const eliminarProducto = () => {
-        // Lógica para eliminar el producto
+        localStorage.removeItem(props.id);
+        setVisible(false);
     };
 
-    return (
+    return  visible ? (
         <div className="resume_productos">
             <div className="resume_productos_imagen">
-                <img src='https://bit.ly/3NA1ZJR' alt="Producto"/>
+                <img src={props.imagen} alt="Producto" />
             </div>
             <div className="resume_productos_contenido">
                 <div className="resume_productos_detalle">
-                    <h3>Nombre: asdas</h3>
-                    <p>Precio: fff</p>
+                    <h3>{props.nombre}</h3>
+                    <p>{props.precio}</p>
                 </div>
                 <div className="resume_productos_cantidad">
                     <button onClick={disminuirCantidad}>-</button>
@@ -39,5 +59,5 @@ export const ResumeProductos = () => {
                 Eliminar
             </button>
         </div>
-    );
+    ):null;
 };

@@ -8,6 +8,7 @@ import {useProductos} from "./hook/useProductos";
 function App() {
 
     const productos = useProductos();
+
     const [carrocompras,setCarroCompras]=useState(0);
 
     return (
