@@ -10,7 +10,7 @@ export const DetallesProducto = () => {
     const product = productos.find(p => p.id === productid);
 
 
-    const [compraContador,setContador]=useState(0)
+    const [compraContador,setContador]=useState(1)
 
     const Comprar=()=>{
         console.log(`Se hizo clic en Comprar. Cantidad de clics: ${compraContador}, ID de la ruta: ${productid}`);

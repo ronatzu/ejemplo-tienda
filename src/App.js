@@ -8,13 +8,12 @@ import {useProductos} from "./hook/useProductos";
 function App() {
 
     const productos = useProductos();
-    const [carrocompras,setCarroCompras]=useState();
+    const [carrocompras,setCarroCompras]=useState(0);
 
     return (
       <>
           <ShopContext.Provider value={{productos,carrocompras,setCarroCompras}}>
                   <MainHeader/>
-              {console.log(carrocompras)}
                   <ShopRouter/>
                   <Footer/>
           </ShopContext.Provider>

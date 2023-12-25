@@ -1,0 +1,36 @@
+.resumen {
+    text-align: center;
+}
+
+.resumen__titulo {
+    margin-bottom: 20px;
+    font-family: sans-serif;
+}
+
+.resumen__contenedor-productos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.resumen__boton {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.resumen__boton button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #ffffff;
+    cursor: pointer;
+    margin: 20px;
+}
+
+.resumen__boton button:hover {
+    background-color: #2980b9;
+}

@@ -8,9 +8,9 @@ export const Carrito=()=>{
     console.log(carrocompras.contador)
     return (
         <div className="carrito">
-            <Link to={'/'}>
+            <Link to={'/Resumen'}>
                 <img src={Carrito_compra} alt="carrito compras" width="32" height="32"/>
-                {carrocompras.contador> 0 && (
+                {carrocompras.contador > 0 && (
                     <span className="contador_carrito">{carrocompras.contador}</span>
                 )}
             </Link>
