@@ -41,21 +41,21 @@ export const ResumeProductos = (props) => {
 
     return  visible ? (
         <div className="resume_productos">
-            <div className="resume_productos_imagen">
+            <div className="resume_imagen">
                 <img src={props.imagen} alt="Producto" />
             </div>
-            <div className="resume_productos_contenido">
-                <div className="resume_productos_detalle">
+            <div className="resume_contenido">
+                <div className="resume_detalle">
                     <h3>{props.nombre}</h3>
                     <p>{props.precio}</p>
                 </div>
-                <div className="resume_productos_cantidad">
+                <div className="resume_cantidad">
                     <button onClick={disminuirCantidad}>-</button>
                     <span>{cantidad}</span>
                     <button onClick={aumentarCantidad}>+</button>
                 </div>
             </div>
-            <button onClick={eliminarProducto} className="resume_productos_eliminar">
+            <button onClick={eliminarProducto} className="resume_eliminar">
                 Eliminar
             </button>
         </div>

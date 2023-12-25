@@ -11,21 +11,19 @@ export const DetallesProducto = () => {
     const [countClic, setContador] = useLocalStorage(productid, 0);
     const [sumaTotalClics, setSumaTotalClics] = useState(0);
 
-    // Efecto para actualizar la suma total cada vez que cambie countClic
-    useEffect(() => {
-        // Obtener todos los valores almacenados en localStorage
-        const valoresLocalStorage = Object.values(localStorage);
-        console.log(valoresLocalStorage);
 
-        // Convertir los valores a números y sumarlos
+    useEffect(() => {
+
+        const valoresLocalStorage = Object.values(localStorage);
+       // console.log(valoresLocalStorage);
+
         const suma = valoresLocalStorage.reduce((acumulador, valor) => acumulador + parseInt(valor, 10), 0);
 
-        // Actualizar la suma total
         setSumaTotalClics(suma);
     }, [countClic]);
 
-const keys = Object.keys(localStorage);
-console.log('Claves en localStorage:', keys);
+       // const keys = Object.keys(localStorage);
+        //console.log('Claves en localStorage:', keys);
 
 
     const Comprar = () => {
@@ -42,7 +40,7 @@ console.log('Claves en localStorage:', keys);
     }
 
     return (
-        <div className="product_detail_container">
+        <div className="product_container">
             <div className="product_row">
                 <div className="product_image">
                     <img src={product.imagen} alt={product.nombre} />
@@ -57,7 +55,7 @@ console.log('Claves en localStorage:', keys);
 
             <div className="product_row">
                 <div className="producto_fabricante">
-                    <p><strong>Descripción del Fabricante:<br />
+                    <p><strong>Descripción:<br />
                     </strong> {product.descripcion_larga}</p>
                 </div>
             </div>

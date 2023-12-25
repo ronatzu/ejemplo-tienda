@@ -1,0 +1,54 @@
+/* Contacto.css */
+.contacto_container {
+    max-width: 600px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.contacto_title {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.contacto_text {
+    margin-bottom: 24px;
+}
+
+.contacto_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacto_form label {
+    margin-bottom: 8px;
+}
+
+.contacto_form input,
+.contacto_form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-radius: 8px; /* Agrega bordes redondeados */
+}
+
+.contacto_form textarea {
+    resize: none; /* Evita que el textarea sea redimensionable */
+}
+
+.contacto_form button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px; /* Agrega bordes redondeados */
+}
+
+.contacto_form button:hover {
+    background-color: #45a049;
+}

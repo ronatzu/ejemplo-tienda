@@ -9,26 +9,20 @@ export const Carrito = () => {
     const [contador, setContador] = useState(0);
 
     useEffect(() => {
-        // Función para manejar cambios en el localStorage
         const handleLocalStorageChange = () => {
-            console.log("LocalStorage ha cambiado");
             const localStorageKeys = Object.keys(localStorage);
             const nuevoContador = localStorageKeys.length;
             setContador(nuevoContador);
         };
 
-
-        // Agrega un evento para escuchar cambios en el localStorage
         window.addEventListener('storage', handleLocalStorageChange);
 
-        // Llama a handleLocalStorageChange para establecer el contador inicial
         handleLocalStorageChange();
 
-        // Limpia el evento al desmontar el componente
         return () => {
             window.removeEventListener('storage', handleLocalStorageChange);
         };
-    }, [carrocompras]); // Añade carrocompras como dependencia si también depende de él
+    }, [carrocompras]);
 
     return (
         <div className="carrito">

@@ -8,11 +8,10 @@ export const Resumen = () => {
     const productos_almacenados = Object.keys(localStorage);
 
     return (
-        <div className="resumen">
+        <div className="resumen">   
             <h2 className="resumen__titulo">RESUMEN DE COMPRAS</h2>
             <div className="resumen__contenedor-productos">
                 {productos_almacenados.map((clave) => {
-                    // Buscar el producto en el array productos usando la clave
                     const producto = productos.find((p) => p.id === clave);
 
                     return producto && (

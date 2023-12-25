@@ -1,4 +1,3 @@
-/* ResumeProductos.css */
 
 .resume_productos {
     border: 1px solid #ccc;
@@ -12,11 +11,17 @@
     margin-bottom: 10px;
 }
 
-.resume_productos_imagen {
+.resume_imagen {
     margin-right: 20px;
+
 }
 
-.resume_productos_contenido {
+.resume_imagen img {
+    width: 300px;
+    height: 200px;
+}
+
+.resume_contenido {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,48 +29,48 @@
     flex-grow: 1;
 }
 
-.resume_productos_detalle {
+.resume_detalle {
     text-align: center;
 }
 
-.resume_productos_detalle h3 {
+.resume_detalle h3 {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.resume_productos_detalle p {
+.resume_detalle p {
     font-size: 14px;
     font-weight: bold;
 }
 
-.resume_productos_cantidad {
+.resume_cantidad {
     display: flex;
     align-items: center;
     margin-top: 10px;
 }
 
-.resume_productos_cantidad button {
+.resume_cantidad button {
     margin: 0 5px;
     padding: 8px 12px;
     font-size: 16px;
     border: 1px solid #3498db;
-    border-radius: 5px; /* Redondea las esquinas */
+    border-radius: 5px;
     background-color: #3498db;
     color: #ffffff;
     cursor: pointer;
 }
 
-.resume_productos_cantidad span {
+.resume_cantidad span {
     margin: 0 5px;
 }
 
-.resume_productos_eliminar {
+.resume_eliminar {
     margin-top: 10px;
     padding: 8px 12px;
     font-size: 16px;
     border: 1px solid #e74c3c;
-    border-radius: 5px; /* Redondea las esquinas */
+    border-radius: 5px;
     background-color: #e74c3c;
     color: #ffffff;
     cursor: pointer;
